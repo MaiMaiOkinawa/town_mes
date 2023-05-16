@@ -92,7 +92,7 @@ h1{
 }
 
 img {
-    outline: thick double rgb(255, 255, 255);
+    outline: thick double rgb(255,248,95);
     /* outline-color: rgba(42, 50, 91); */
     box-shadow: 15px 15px 15px rgba(25, 25, 25, 0.3), 15px 15px 15px rgba(25, 25, 25, 0.3);
 }
@@ -131,15 +131,6 @@ img {
     height: 30px;
     width: 30px;
   }
-
-  /* .text-toggle:focus,
-  .text-toggle:active,
-  .text.active #icon:focus,
-  .text.active #icon:active
-  {
-    outline: transparent;
-    background-color: transparent;
-  } */
 
   .text-toggle:focus {
     outline: none;
