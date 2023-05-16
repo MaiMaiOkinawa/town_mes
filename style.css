@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Jost', sans-serif;
-    background-color: #30DDCE;
+    font-family: 'Jost', Kokoro, sans-serif;
+    background-color: #ACF1EB;
     color: #2A325B;
 }
 
@@ -156,4 +156,28 @@ img {
   /* We want to remove chevron Icon when the text is shown */
   .text.active .text-toggle .fa-chevron-down {
     display: none;
+  }
+
+  .img__description {
+    position: absolute;
+    top: 70%;
+    bottom: 0;
+    left: 60%;
+    right: 0;
+    background: rgba(29, 106, 154, 0.722);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+    
+  }
+  
+  .text-img:hover .img__description {
+    visibility: visible;
+    opacity: 1;
   }
