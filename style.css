@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Condensed&family=Chivo+Mono&family=Inconsolata&family=Jost:wght@400;700&family=Montserrat&family=Mulish:wght@200;400&family=Patrick+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&family=Sono&family=Space+Mono&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: #30DDCE;
+    color: #2A325B;
+}
+
+h1{
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.text {
+    /* background-color: transparent; */
+    border: none;
+    border-top: 1px double #2A325B;
+    border-top: double;
+    border-right: 1px double #2A325B;
+    border-right: double;
+    border-left: 1px double #2A325B;
+    border-left: double;
+    border-radius: 3px;
+    margin: 0 auto;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+    /* Prevent the text from wrapping */
+    white-space: nowrap
+}
+
+.text:last-of-type{
+    border-bottom: 1px double #2A325B;
+    border-bottom: double;
+}
+
+.text.active {
+    display: flex;
+    /* background-color: transparent; */
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.text #icon{
+    display: none;
+    font-size: 25px;
+}
+
+
+.text.active #icon {
+   cursor: pointer; 
+   display:block;
+   align-items: center;
+   flex-direction: column;
+   margin: 5px 10px;
+   transition: 0.3s ease-in;
+}
+
+.text.active #icon:hover,
+.text i:hover {
+    color: #f5f5dc;
+}
+
+.text.active #icon:active {
+    outline: none;
+    background-color: transparent;
+}
+
+.text-img {
+    display: none;
+    margin: 5px 0 25px;
+    /* border-radius: 5px; */
+    /* display: block; */
+    top: 20px;
+    left:-25px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center center;
+    transition: 0.5s ease-in-out;
+}
+
+img {
+    outline: thick double rgb(255, 255, 255);
+    /* outline-color: rgba(42, 50, 91); */
+    box-shadow: 15px 15px 15px rgba(25, 25, 25, 0.3), 15px 15px 15px rgba(25, 25, 25, 0.3);
+}
+
+.text i {
+    margin: 0 auto 30px;
+    color: #2A325B;
+}
+
+.text-title {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* A setting when text is active and text is on */
+.text.active .text-img {
+    position: relative;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.text-toggle {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+  }
+
+  /* .text-toggle:focus,
+  .text-toggle:active,
+  .text.active #icon:focus,
+  .text.active #icon:active
+  {
+    outline: transparent;
+    background-color: transparent;
+  } */
+
+  .text-toggle:focus {
+    outline: none;
+  }
+
+  .text-toggle .fa-chevron-up {
+    display: none;
+  }
+
+ .text.active .text-toggle .fa-chevron-up{
+    display: block;
+  }
+
+  /* We want to remove chevron Icon when the text is shown */
+  .text.active .text-toggle .fa-chevron-down {
+    display: none;
+  }
