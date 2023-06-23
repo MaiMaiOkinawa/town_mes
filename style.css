@@ -16,6 +16,7 @@ body {
     font-family: 'Jost', Kokoro, sans-serif;
     background-color: var(--primary-green);
     color: var(--primary-black);
+    text-transform: lowercase;
     
 }
 
